@@ -1,0 +1,8 @@
+ma_tulipe = (1,2,3,4,5,6,7,8,9,10,11,12,13)
+print(ma_tulipe[:3])
+print(ma_tulipe[5:])
+print(ma_tulipe[3:6])
+print("depuis la fin",ma_tulipe[-2:])
+print("depuis la fin",ma_tulipe[-3:-1])
+print("saute mouton",ma_tulipe[4:12:2])
+print("saute mouton",ma_tulipe[::2])
