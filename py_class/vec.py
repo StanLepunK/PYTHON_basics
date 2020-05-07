@@ -1,22 +1,26 @@
 import numbers
-# import decimal
-# >>> [isinstance(x, numbers.Number) for x in (0, 0.0, 0j, decimal.Decimal(0))]
-# [True, True, True, True]
 
 class vec:
 	instance = 0
-	#ssize = 0
-	value = []
-	# NumberTypes = (types.IntType, types.LongType, types.FloatType, types.ComplexType)
 	def __init__(self, elem):
+		self.value = []
 		if isinstance(elem, list):
 			self.value = elem
 			self.size = len(elem)
+		elif isinstance(elem, tuple):
+			self.size = abs(elem[0] - elem[1])
+			index = 0
+			start = 0
+			if(elem[0] > elem[1]):
+				start = elem[1]
+			else:
+				start = elem[0]
+			while index < self.size:
+				self.value.append(index + start)
+				index += 1
 		else:
-			index = 0;
-			# value;
+			index = 0
 			while index < elem:
-				# self.value[index] = index
 				self.value.append(index)
 				index += 1
 		vec.instance += 1
